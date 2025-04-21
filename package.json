@@ -6,6 +6,7 @@
 	"license": "MIT" ,
 	"files": [
 		"dist/**/*.js",
+		"dist/**/*.d.ts",
 		"!dist/**/*.test.js",
 		"!dist/**/*.sotries.js"
 	],
