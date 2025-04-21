@@ -4,12 +4,6 @@
 	"type": "module",
 	"author": "Guy Lewy",
 	"license": "MIT",
-	"files": [
-		"dist/**/*.js",
-		"dist/**/*.d.ts",
-		"!dist/**/*.test.js",
-		"!dist/**/*.sotries.js"
-	],
 	"main": "dist/main.js",
 	"types": "dist/main.d.js",
 	"scripts": {
