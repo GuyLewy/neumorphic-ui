@@ -2,8 +2,8 @@ import styles from "./button.module.scss";
 
 type ButtonProps = Readonly<{
 	label: string;
-	onClick?: () => void;
-	className?: React.MouseEventHandler<HTMLButtonElement>;
+	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	className?: string;
 }>;
 
 export function Button(props: ButtonProps) {
