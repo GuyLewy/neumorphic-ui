@@ -1,53 +1,58 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./button";
-import { Target } from "lucide-react";
+import { Input } from "./input";
+import { Mail } from "lucide-react";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-	title: "Components/Button",
-	component: Button,
+	title: "Components/Input",
+	component: Input,
 	parameters: {
 		layout: "centered",
 	},
 	tags: ["autodocs"],
 	argTypes: {},
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Enabled: Story = {
 	args: {
-		label: "Primary",
+		type: "text",
+        label: "Email",
 	},
 };
 
 export const Icon: Story = {
 	args: {
-		icon: Target,
-		label: "Icon",
+		type: "text",
+        label: "Email",
+        icon: Mail,
+        iconPosition: "left",
 	},
 };
 
 export const IconRight: Story = {
 	args: {
-		icon: Target,
-		label: "Icon Right",
-		iconPosition: "right",
+		type: "email",
+        label: "Email",
+        icon: Mail,
+        iconPosition: "right",
 	},
 };
 
 export const Disabled: Story = {
 	args: {
-		label: "Disabled",
-		disabled: true,
+		type: "text",
+        disabled: true,
+        label: "Disabled",
 	},
 };
 
-export const Click: Story = {
+export const Number: Story = {
 	args: {
-		label: "Click Me!",
-		onClick: () => alert("Button clicked!"),
+		type: "number",
+        label: "Number",
 	},
 };

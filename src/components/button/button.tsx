@@ -1,18 +1,38 @@
+import { LucideIcon } from "lucide-react";
 import styles from "./button.module.scss";
 
-type ButtonProps = Readonly<{
+export function Button({
+	label,
+	icon: Icon,
+	onClick,
+	className,
+	disabled = false,
+	iconPosition = "left",
+	...props
+}: {
 	label: string;
+	icon?: LucideIcon;
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 	className?: string;
-}>;
-
-export function Button(props: ButtonProps) {
+	disabled?: boolean;
+	iconPosition?: "left" | "right";
+} & React.ButtonHTMLAttributes<HTMLButtonElement>) {
 	return (
 		<button
-			onClick={props.onClick}
-			className={`${styles.button} ${props.className}`}
+			onClick={onClick}
+			className={`${styles.button} ${className}`}
+			disabled={disabled}
+			{...props}
 		>
-			{props.label}
+			{Icon && iconPosition === "left" && (
+				<Icon className={styles.icon} />
+			)}
+
+			{label}
+
+			{Icon && iconPosition === "right" && (
+				<Icon className={styles.icon} />
+			)}
 		</button>
 	);
 }
