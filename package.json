@@ -15,9 +15,9 @@
 		"build-storybook": "storybook build"
 	},
 	"peerDependencies": {
+		"lucide-react": "^0.503.0",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"lucide-react": "^0.503.0"
+		"react-dom": "^19.0.0"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.21.0",
@@ -46,7 +46,8 @@
 		"typescript-eslint": "^8.24.1",
 		"vite": "^6.2.0",
 		"vite-plugin-dts": "^4.5.3",
-		"vite-plugin-lib-inject-css": "^2.2.2"
+		"vite-plugin-lib-inject-css": "^2.2.2",
+		"classnames": "^2.5.1"
 	},
 	"eslintConfig": {
 		"extends": [

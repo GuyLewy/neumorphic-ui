@@ -1,5 +1,6 @@
 import { LucideIcon } from "lucide-react";
 import styles from "./button.module.scss";
+import cn from "classnames";
 
 export function Button({
 	label,
@@ -12,7 +13,7 @@ export function Button({
 }: {
 	label: string;
 	icon?: LucideIcon;
-	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+	onClick?: () => void;
 	className?: string;
 	disabled?: boolean;
 	iconPosition?: "left" | "right";
@@ -20,7 +21,7 @@ export function Button({
 	return (
 		<button
 			onClick={onClick}
-			className={`${styles.button} ${className}`}
+			className={cn(className, styles.button)}
 			disabled={disabled}
 			{...props}
 		>

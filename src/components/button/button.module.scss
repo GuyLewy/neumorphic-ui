@@ -14,10 +14,6 @@
 	align-items: center;
 	gap: 0 0.25rem;
 
-	> .icon {
-		height: 1rem;
-	}
-
 	&:not(:disabled):active {
 		box-shadow: inset 4px 4px 7px var(--nui-shadow-color-dark, #b8b9be),
 			inset -2px -2px 5px var(--nui-shadow-color-dark, #b8b9be);
@@ -38,4 +34,8 @@
 	&:focus {
 		outline: none;
 	}
+}
+
+.icon {
+	height: 1rem;
 }
