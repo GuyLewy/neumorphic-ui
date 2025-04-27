@@ -1,0 +1,16 @@
+.option {
+    padding: 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow:
+            inset 4px 4px 7px var(--nui-shadow-color-dark, #b8b9be),
+            inset -2px -2px 5px var(--nui-shadow-color-dark, #b8b9be);
+    }
+}
+
+.optionsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
