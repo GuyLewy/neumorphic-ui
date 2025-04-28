@@ -6,6 +6,9 @@
 	"license": "MIT",
 	"main": "dist/main.js",
 	"types": "dist/main.d.js",
+	"files": [
+		"dist/**/*.*"
+	],
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
