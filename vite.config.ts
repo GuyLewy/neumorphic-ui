@@ -14,7 +14,7 @@ export default defineConfig({
 		react(),
 		dts({
 			tsconfigPath: "./tsconfig.app.json",
-			exclude: ["src/**/*.stories.ts"], // Exclude stories from .d.ts generation
+			exclude: ["src/**/*.stories.*"], // Exclude stories from .d.ts generation
 		}),
 		libInjectCss(),
 	],
@@ -31,7 +31,7 @@ export default defineConfig({
 			input: Object.fromEntries(
 				globSync("src/**/*.{ts,tsx}", {
 					 // Ignore stories
-					 ignore: ["src/**/*.stories.ts"],
+					 ignore: ["src/**/*.stories.*"],
 				}).map((file) => [
 					// This removes `src/` as well as the file extension from each
 					// file, so e.g. src/nested/foo.js becomes nested/foo
