@@ -1,39 +1,36 @@
 .popover {
-    position: relative;
+	position: relative;
 
-    &:not(.popoverHidden) .popoverButton {
-        border-radius: var(--nui-button-radius, 0.375rem)
-            var(--nui-button-radius, 0.375rem) 0 0;
+	&:not(.popoverHidden) .popoverButton {
+		border-radius: var(--nui-button-radius, 0.375rem)
+			var(--nui-button-radius, 0.375rem) 0 0;
 
-        box-shadow:
-            inset 4px 4px 7px var(--nui-shadow-color-dark, #b8b9be),
-            inset -2px -2px 5px var(--nui-shadow-color-dark, #b8b9be);
-    }
+		box-shadow: inset 4px 4px 7px var(--nui-shadow-color-dark, #b8b9be),
+			inset -2px -2px 5px var(--nui-shadow-color-dark, #b8b9be);
+	}
 
-    .popoverContent {
-        position: absolute;
-        height: fit-content;
-        width: 200%;
-        top: 100%;
-        left: 0%;
-        box-shadow:
-            3px 3px 6px var(--nui-shadow-color-dark, #b8b9be),
-            -3px -3px 6px var(--nui-shadow-color-light, #ffffff);
-        background-color: var(--nui-color-background, #f0f0f0);
-        border-radius: 0 var(--nui-button-radius, 0.375rem)
-            var(--nui-button-radius, 0.375rem)
-            var(--nui-button-radius, 0.375rem);
+	.popoverContent {
+		position: absolute;
+		height: fit-content;
+		width: fit-content;
+		min-width: 150px;
+		top: 100%;
+		left: 0%;
+		box-shadow: 3px 3px 6px var(--nui-shadow-color-dark, #b8b9be),
+			-3px -3px 6px var(--nui-shadow-color-light, #ffffff);
+		background-color: var(--nui-color-background, #f0f0f0);
+		border-radius: 0 var(--nui-button-radius, 0.375rem)
+			var(--nui-button-radius, 0.375rem)
+			var(--nui-button-radius, 0.375rem);
 
-        transition:
-            height 0.2s,
-            opacity 0.2s;
-        opacity: 1;
-    }
+		transition: height 0.2s, opacity 0.2s;
+		opacity: 1;
+	}
 }
 
 .popoverHidden {
-    .popoverContent {
-        height: 0;
-        opacity: 0;
-    }
+	.popoverContent {
+		height: 0;
+		opacity: 0;
+	}
 }

@@ -1,16 +1,29 @@
-.option {
-    padding: 0.5rem;
+.popover {
+	.popoverButton {
+		min-width: 100px;
+	}
+}
 
-    &:hover {
-        cursor: pointer;
-        box-shadow:
-            inset 4px 4px 7px var(--nui-shadow-color-dark, #b8b9be),
-            inset -2px -2px 5px var(--nui-shadow-color-dark, #b8b9be);
-    }
+.option {
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: baseline;
+
+	&:hover {
+		cursor: pointer;
+		box-shadow: inset 4px 4px 7px var(--nui-shadow-color-dark, #b8b9be),
+			inset -2px -2px 5px var(--nui-shadow-color-dark, #b8b9be);
+	}
+
+	.icon {
+		height: 1rem;
+	}
 }
 
 .optionsContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
 }
